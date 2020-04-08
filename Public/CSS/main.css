@@ -1,0 +1,72 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: black;
+    color: white;
+}
+
+
+
+label{
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.checkBox{
+    width: 15px;
+    height: 15px;
+    border: white 1px solid;
+    position: absolute;
+    z-index: 1;
+}
+
+input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.radio{
+    position:relative;
+    top: 5px;
+    left: 65px
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
+/*Bootstrap*/
+
+.form-group{
+    display: flex;
+    color: white;
+}
+
+.form-control{
+    border: white solid 1px;
+    color: white;
+    background: black;
+}
+
+.form-control:focus{
+    background: black;
+    color: white;
+}
+
+.infoEtoile{
+    font-style: italic;
+}
+
+/*FontAwesome*/
+
+.fa-check{
+    position: relative;
+    bottom:5px;
+    font-size: 14px;
+}
