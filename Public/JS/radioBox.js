@@ -1,5 +1,5 @@
 let checks = document.querySelectorAll(".fa-check");
-let boxes = document.querySelectorAll('.checkBox')
+let boxes = document.querySelectorAll('.checkBox');
 let radios = document.querySelectorAll('input[type=radio]');
 
 function updateBox1(){
@@ -20,4 +20,3 @@ function updateBox2(){
 
 boxes[0].addEventListener('click',updateBox1);
 boxes[1].addEventListener('click',updateBox2);
-
