@@ -19,32 +19,15 @@ request.onreadystatechange = function(){
 let data = {codePostal: document.querySelector('input[name=codePostal]').value};
 request.send(JSON.stringily(data));
 }
-=======
 
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
 //Vérification du formulaire envoyé
 
 let form = document.querySelector('form');
 
-=======
-
 
 
 
 //Vérification du formulaire envoyé
->>>>>>> 79c5bbacbf4bdcba82562c597951efc469b5debf
 let champs = document.querySelectorAll('.form-control');
 form.addEventListener('submit',function(event){
     let errors = false;
