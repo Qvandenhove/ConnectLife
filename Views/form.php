@@ -92,7 +92,7 @@ ob_start();
         <div class="form-group col-8">
             <label for="ville" class = "col-4">Ville *: </label>
             <select class = "form-control col-7" name="ville" id="ville">
-
+                <option value="">Choisissez une ville</option>
             </select>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur ville">

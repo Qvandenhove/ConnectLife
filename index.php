@@ -15,7 +15,7 @@ switch($action){
         break;
 
     case 'getVilles':
-        getVilles(62223);
+        getVilles();
         break;
     default:
         form();
