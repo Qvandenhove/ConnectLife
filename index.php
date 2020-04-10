@@ -6,15 +6,11 @@ if (isset($_GET['action'])){
     $action ='';
 }
 
-
 switch($action){
     case 'form':
         form();
         break;
 
-    case 'test':
-        var_dump($_POST);
-        break;
     default:
-        form();
+        home();
 }
