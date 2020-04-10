@@ -1,5 +1,7 @@
 <?php
 require_once('Controllers/front.php');
+require_once ('Controllers/back.php');
+
 if (isset($_GET['action'])){
     $action = $_GET['action'];
 }else{
@@ -12,8 +14,8 @@ switch($action){
         form();
         break;
 
-    case 'test':
-        var_dump($_POST);
+    case 'getVilles':
+        getVilles(62223);
         break;
     default:
         form();
