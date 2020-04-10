@@ -42,7 +42,7 @@ input[type=radio]{
     color: red;
 }
 
-input.erreur, .checkBox.erreur{
+input.erreur, .checkBox.erreur, select.erreur{
     border-color: red;
 }
 

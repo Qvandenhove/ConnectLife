@@ -1,7 +1,26 @@
 let form = document.querySelector('form');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Vérification du formulaire envoyé
 let champs = document.querySelectorAll('.form-control');
-champs[0].setAttribute('checked', 'false');
-champs[1].setAttribute('checked','false');
 form.addEventListener('submit',function(event){
     let errors = false;
     let radioFalse = 0;
@@ -25,10 +44,9 @@ form.addEventListener('submit',function(event){
                     })
                 })
             }
-        }else if(champ.getAttribute('type') === 'text' || champ.getAttribute('type') === 'email'){
+        }else if(champ.getAttribute('type') === 'text' || champ.getAttribute('type') === 'email' || champ.getAttribute('name') === 'ville'){
             if(champ.value === ''){
                 let champErreur = document.querySelector('.erreur.' + champ.getAttribute('name'));
-                console.log(champErreur);
                 champErreur.classList.remove('hidden');
                 champ.addEventListener('input',function supprimerErreur(){
                     champ.classList.remove('erreur');
