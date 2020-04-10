@@ -1,5 +1,4 @@
 <?php
-//session_start();
 require_once('Controllers/front.php');
 if (isset($_GET['action'])){
     $action = $_GET['action'];
@@ -7,11 +6,11 @@ if (isset($_GET['action'])){
     $action ='';
 }
 
-
 switch($action){
     case 'form':
         form();
         break;
+
     default:
-        form();
+        home();
 }

@@ -8,8 +8,6 @@ body{
     color: white;
 }
 
-
-
 label{
     margin: 0;
     display: flex;
@@ -17,8 +15,8 @@ label{
 }
 
 .checkBox{
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
     border: white 1px solid;
     position: absolute;
     z-index: 1;
@@ -40,17 +38,27 @@ input[type=radio]{
     visibility: hidden;
 }
 
+.erreur{
+    color: red;
+}
+
+input.erreur, .checkBox.erreur, select.erreur{
+    border-color: red;
+}
 
 /*Bootstrap*/
 
 .form-group{
     display: flex;
     color: white;
+    margin: 0;
 }
 
 .form-control{
     border: white solid 1px;
     color: white;
+    height: 1.8rem;
+    font-size: 12px;
     background: black;
 }
 
