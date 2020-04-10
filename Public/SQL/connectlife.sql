@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 08 avr. 2020 à 11:38
+-- Généré le :  ven. 10 avr. 2020 à 08:52
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -29,19 +29,26 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `clients` (
-  `GUIDClient` int(11) NOT NULL,
-  `civilite` varchar(1) NOT NULL,
+  `GUIDClient` varchar(36) NOT NULL,
+  `civilite` varchar(1) DEFAULT NULL,
   `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
+  `prenom` varchar(50) DEFAULT NULL,
   `estSociete` int(1) NOT NULL,
-  `fonctionDansLaSociete` varchar(50) NOT NULL,
-  `telephone1` varchar(10) NOT NULL,
+  `fonctionDansLaSociete` varchar(50) DEFAULT NULL,
+  `telephone1` varchar(10) DEFAULT NULL,
   `telephone2` varchar(10) DEFAULT NULL,
   `email` varchar(150) NOT NULL,
-  `adresse1` varchar(300) NOT NULL,
+  `adresse1` varchar(300) DEFAULT NULL,
   `adresse2` varchar(300) DEFAULT NULL,
   `idSociete` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `clients`
+--
+
+INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, `fonctionDansLaSociete`, `telephone1`, `telephone2`, `email`, `adresse1`, `adresse2`, `idSociete`) VALUES
+('3F2504E0-4F89-11D3-9A0C-0305E82C3301', NULL, 'Dupont', NULL, 1, NULL, NULL, NULL, 'test@mail.fr', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -53,6 +60,14 @@ CREATE TABLE `societe` (
   `idSociete` int(11) NOT NULL,
   `nomDeLaSociete` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `societe`
+--
+
+INSERT INTO `societe` (`idSociete`, `nomDeLaSociete`) VALUES
+(0, 'SARL'),
+(1, '');
 
 -- --------------------------------------------------------
 

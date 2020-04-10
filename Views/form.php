@@ -8,13 +8,13 @@ ob_start();
         <div class="form-group col-8">
             <label class = "col-4">Civilité *: </label>
             <div class="radio">
-                <input class = "form-control" type="radio" id="civiliteFemme" name="civilite" value="Femme">
+                <input class = "form-control" checked="false" type="radio" id="civiliteFemme" name="civilite" value="Femme">
                 <div class="checkBox"><i class="fas fa-check hidden"></i></div>
             </div>
 
             <label class = "m-0 p-0 col-2" for="civiliteFemme">Madame</label>
             <div class = "radio" style="left:70px">
-                <input class = "form-control"  type="radio" id="civiliteHomme" name="civilite" value="Homme">
+                <input class = "form-control" checked="false"  type="radio" id="civiliteHomme" name="civilite" value="Homme">
                 <div class="checkBox"><i class="fas fa-check hidden"></i></div>
             </div>
             <label for="civiliteHomme" class = "m-0 p-0 col-2">Monsieur</label>
@@ -22,7 +22,7 @@ ob_start();
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur civilite">
             <div class="col-4 mr-5"></div>
-            <div class=col-8>Veuillez indiquer votre civilité valide</div>
+            <div class=col-8>Veuillez indiquer votre civilité</div>
         </div>
 
         <div class="form-group col-8">
@@ -92,9 +92,7 @@ ob_start();
         <div class="form-group col-8">
             <label for="ville" class = "col-4">Ville *: </label>
             <select class = "form-control col-7" name="ville" id="ville">
-                <option value="Arras">Arras</option>
-                <option value="Lille">Lille</option>
-                <option value="Autre Part"> Autre Part</option>
+
             </select>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur ville">
