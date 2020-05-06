@@ -26,6 +26,9 @@ function recupererVilles(){
 
 document.querySelector('input[name=codePostal]').addEventListener('change',recupererVilles);
 
+
+
+
 //Vérification du formulaire envoyé
 let form = document.querySelector('form');
 let champs = document.querySelectorAll('.form-control');
