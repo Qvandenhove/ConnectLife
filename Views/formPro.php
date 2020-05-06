@@ -4,7 +4,7 @@ $stylesheets = ['main']
 ?>
 
 <section class = "container">
-    <form action="index.php?action=test" method="POST" class = "col-12 align-items-center flex-column d-flex">
+    <form action="index.php?action=update&client=<?= $_GET['client'] ?>" method="POST" class = "col-12 align-items-center flex-column d-flex">
         <img src="Public/Images/connectLife.png" alt="logo connectLife" class = "col-8 m-0">
         <div class="form-group col-8">
             <label class = "col-4">Civilité *: </label>
@@ -73,7 +73,7 @@ $stylesheets = ['main']
         </div>
 
         <div class="form-group col-8">
-            <label for="adresse2" class = "col-4">Adresse2 *: </label>
+            <label for="adresse2" class = "col-4">Adresse2 : </label>
             <input type="text" name = "adresse2" id="adresse2" class = "col-7 form-control">
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur adresse2">

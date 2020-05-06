@@ -15,6 +15,11 @@ switch($action){
         form($customer);
         break;
 
+    case 'update':
+        update();
+        thanks();
+        break;
+
     case 'getVilles':
         getVilles();
         break;
