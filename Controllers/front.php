@@ -8,3 +8,6 @@ function form($customer){
     }
 
 }
+function home(){
+    require('Views/accueil.php');
+}

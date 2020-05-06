@@ -1,0 +1,33 @@
+.container {
+    align-items: center;
+}
+
+.head {
+    text-align: center;
+}
+
+.col {
+    color: rgba(60, 88, 100, 255)
+}
+
+.titre1 {
+    margin-top: 100px;
+    font-size: xx-large;
+}
+
+.text {
+    font-size: large;
+}
+
+.strong {
+    color: red;
+    text-decoration: underline;
+}
+
+.btn {
+    margin-top: 50px;
+    background-color: rgba(23, 113, 140, 255);
+    border-color: rgba(23, 113, 140, 255);
+    border-radius: 5%;
+    font-size: xx-large;
+}

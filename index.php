@@ -20,5 +20,5 @@ switch($action){
         break;
 
     default:
-        form();
+        home();
 }
