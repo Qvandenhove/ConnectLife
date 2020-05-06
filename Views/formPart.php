@@ -1,5 +1,6 @@
 <?php
 ob_start();
+$stylesheets = ['main']
 ?>
 
 <section class = "container">
