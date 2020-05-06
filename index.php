@@ -11,12 +11,14 @@ if (isset($_GET['action'])){
 
 switch($action){
     case 'form':
-        form();
+        $customer = getCustomer($_GET['client']);
+        form($customer);
         break;
 
     case 'getVilles':
         getVilles();
         break;
+
     default:
         form();
 }

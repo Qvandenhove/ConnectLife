@@ -1,3 +1,5 @@
+//Récupération des villes
+
 let request = new XMLHttpRequest();
 
 
@@ -7,6 +9,7 @@ function recupererVilles(){
         if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
             let response = JSON.parse(this.responseText);
             let select = document.querySelector('select');
+            select.innerHTML = "<option>Choisissez une ville</option>"
             for(ville in response){
                 let option = document.createElement('option');
                 select.appendChild(option);
@@ -23,9 +26,33 @@ function recupererVilles(){
 
 document.querySelector('input[name=codePostal]').addEventListener('change',recupererVilles);
 
+//Adaptation du formulaire
+// let form = document.querySelector('form');
+// let champs = document.querySelectorAll('.form-control');
+//
+// let CustomerRequest = new XMLHttpRequest();
+// let customerGUID = document.location.href.split('=');
+// let data = {GUID: customerGUID[customerGUID.length - 1]};
+// CustomerRequest.open('POST','index.php?action=getCustomer');
+// CustomerRequest.onreadystatechange = function(){
+//     if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+//         let response = JSON.parse(this.responseText);
+//         if(response.estSociete === "0"){
+//             let champsInutiles = [champs[3], champs[4]];
+//             champsInutiles.forEach(function(champInutile){
+//                 console.log(champInutile)
+//             })
+//         }
+//     }
+// };
+// CustomerRequest.send(JSON.stringify(data));
+//
+//
+
+
 //Vérification du formulaire envoyé
-let form = document.querySelector('form');
-let champs = document.querySelectorAll('.form-control');
+
+
 form.addEventListener('submit',function(event){
     let errors = false;
     let radioFalse = 0;

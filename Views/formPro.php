@@ -101,8 +101,8 @@ ob_start();
         </div>
 
         <div class="form-group col-8">
-            <label for="telSociete" class = "col-4">Téléphone Société * : </label>
-            <input type="text" name = "telSociete" id="telSociete" class = "col-7 form-control">
+            <label for="tel1" class = "col-4">Téléphone Société * : </label>
+            <input type="text" name = "tel1" id="tel1" class = "col-7 form-control">
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur telSociete">
             <div class="col-4 mr-5"></div>
@@ -110,8 +110,8 @@ ob_start();
         </div>
 
         <div class="form-group col-8">
-            <label for="telDirect" class = "col-4">Téléphone Directe * : </label>
-            <input type="text" name = "telDirect" id="telDirect" class = "col-7 form-control">
+            <label for="tel2" class = "col-4">Téléphone Directe * : </label>
+            <input type="text" name = "tel2" id="tel2" class = "col-7 form-control">
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur telDirect">
             <div class="col-4 mr-5"></div>
