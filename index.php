@@ -25,5 +25,6 @@ switch($action){
         break;
 
     default:
-        home();
+        $customer = getCustomer($_GET['client']);
+        home($customer);
 }

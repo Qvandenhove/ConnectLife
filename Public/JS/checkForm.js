@@ -28,9 +28,9 @@ document.querySelector('input[name=codePostal]').addEventListener('change',recup
 
 
 //Vérification du formulaire envoyé
-
 let form = document.querySelector('form');
 let champs = document.querySelectorAll('.form-control');
+
 form.addEventListener('submit',function(event){
     let errors = false;
     let radioFalse = 0;
@@ -56,7 +56,6 @@ form.addEventListener('submit',function(event){
             }
         }else if(champ.getAttribute('type') === 'text' || champ.getAttribute('type') === 'email' || champ.getAttribute('name') === 'ville'){
             if(champ.value === ''){
-                errors = true;
                 let champErreur = document.querySelector('.erreur.' + champ.getAttribute('name'));
                 champErreur.classList.remove('hidden');
                 champ.addEventListener('input',function supprimerErreur(){
@@ -68,7 +67,5 @@ form.addEventListener('submit',function(event){
         }
 
     });
-    if (!errors){
-        form.submit()
-    }
+
 });
