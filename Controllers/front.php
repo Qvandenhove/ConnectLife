@@ -5,6 +5,11 @@ function form($customer){
 
 }
 function home($customer){
+    foreach($customer as $key =>$element){
+        if ($element == ''){
+            unset($customer[$key]);
+        }
+    }
     if ($customer == false){
         echo 'lien mort';
 
