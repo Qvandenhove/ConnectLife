@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 10 avr. 2020 à 08:52
--- Version du serveur :  10.4.10-MariaDB
--- Version de PHP :  7.3.12
+-- Généré le : jeu. 07 mai 2020 à 12:02
+-- Version du serveur :  10.4.11-MariaDB
+-- Version de PHP : 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `connectlife`
+-- Base de données : `connectlife`
 --
 
 -- --------------------------------------------------------
@@ -38,6 +37,8 @@ CREATE TABLE `clients` (
   `telephone1` varchar(10) DEFAULT NULL,
   `telephone2` varchar(10) DEFAULT NULL,
   `email` varchar(150) NOT NULL,
+  `code_postal` varchar(5) DEFAULT NULL,
+  `ville` varchar(100) DEFAULT NULL,
   `adresse1` varchar(300) DEFAULT NULL,
   `adresse2` varchar(300) DEFAULT NULL,
   `idSociete` int(11) DEFAULT NULL
@@ -47,8 +48,9 @@ CREATE TABLE `clients` (
 -- Déchargement des données de la table `clients`
 --
 
-INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, `fonctionDansLaSociete`, `telephone1`, `telephone2`, `email`, `adresse1`, `adresse2`, `idSociete`) VALUES
-('3F2504E0-4F89-11D3-9A0C-0305E82C3301', NULL, 'Dupont', NULL, 1, NULL, NULL, NULL, 'test@mail.fr', NULL, NULL, 0);
+INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, `fonctionDansLaSociete`, `telephone1`, `telephone2`, `email`, `code_postal`, `ville`, `adresse1`, `adresse2`, `idSociete`) VALUES
+('3F2504E0-4F89-11D3-9A0C-0305E82C3301', NULL, 'Dupont', NULL, 1, NULL, NULL, NULL, 'test@mail.fr', NULL, NULL, NULL, NULL, 0),
+('c1417696-392b-4053-8864-12bf8f8d5236', NULL, 'Dupont', NULL, 0, NULL, NULL, NULL, 'fdupont@gmail.com', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
