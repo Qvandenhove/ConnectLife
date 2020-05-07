@@ -23,6 +23,10 @@ function update($GUID){
     $isSociety = getCustomer($GUID)['estSociete'];
     if($isSociety == '1'){
         $societyManager = new CESI\ConnectLife\SocietyManager();
-        $societyManager->CreateSociety();
+        $idsociete=$societyManager->CreateSociety($_POST["nomSociete"]);
+        $customerManager->updateProfessional($GUID, $idsociete);
+    }
+    else{
+        $customerManager->updateParticular($GUID);
     }
 }

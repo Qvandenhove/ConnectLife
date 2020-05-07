@@ -1,6 +1,6 @@
 <?php
 require_once('Controllers/front.php');
-require_once ('Controllers/back.php');
+require_once('Controllers/back.php');
 
 if (isset($_GET['action'])){
     $action = $_GET['action'];
@@ -16,7 +16,7 @@ switch($action){
         break;
 
     case 'update':
-        update();
+        update($_GET["client"]);
         thanks();
         break;
 

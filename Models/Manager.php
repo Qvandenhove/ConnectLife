@@ -10,6 +10,6 @@ class Manager
 
     public function __construct()
     {
-        $this->db = new \PDO('mysql:host=localhost;dbname=connectlife;charset=UTF8','root');
+        $this->db = new \PDO('mysql:host=localhost;dbname=ConnectLife;charset=UTF8','root');
     }
 }
