@@ -23,7 +23,7 @@
 
         <div class="form-group col-8">
             <label for="nom" class = "col-4">Nom *: </label>
-            <input type="text" name = "nom" id="nom" class = "col-7 form-control" value = <?= displayInfo('nom',$customer)?>>
+            <input type="text" name = "nom" id="nom" class = "col-7 form-control" value = <?= displayInfo($data,'nom',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur nom">
             <div class="col-4 mr-5"></div>
@@ -32,7 +32,7 @@
 
         <div class="form-group col-8">
             <label for="prenom" class = "col-4">Prénom *: </label>
-            <input type="text" name = "prenom" id="prenom" class = "col-7 form-control" value = <?= displayInfo('prenom',$customer)?>>
+            <input type="text" name = "prenom" id="prenom" class = "col-7 form-control" value = <?= displayInfo($data,'prenom',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur prenom">
             <div class="col-4 mr-5"></div>
@@ -51,7 +51,7 @@
 
         <div class="form-group col-8">
             <label for="posteOccupe" class = "col-4">Poste occupé *: </label>
-            <input type="text" name = "posteOccupe" id="posteOccupe" class = "col-7 form-control" value = <?= displayInfo('fonctionDansLaSociete',$customer)?>>
+            <input type="text" name = "posteOccupe" id="posteOccupe" class = "col-7 form-control" value = <?= displayInfo($data,'fonctionDansLaSociete',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur posteOccupe">
             <div class="col-4 mr-5"></div>
@@ -60,7 +60,7 @@
 
         <div class="form-group col-8">
             <label for="adresse1" class = "col-4">Adresse1 *: </label>
-            <input type="text" name = "adresse1" id="adresse1" class = "col-7 form-control" value = <?= displayInfo('adresse1',$customer)?>>
+            <input type="text" name = "adresse1" id="adresse1" class = "col-7 form-control" value = <?= displayInfo($data,'adresse1',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur adresse1">
             <div class="col-4 mr-5"></div>
@@ -69,7 +69,7 @@
 
         <div class="form-group col-8">
             <label for="adresse2" class = "col-4">Adresse2 : </label>
-            <input type="text" name = "adresse2" id="adresse2" class = "col-7 form-control" value = <?= displayInfo('adresse2',$customer)?>>
+            <input type="text" name = "adresse2" id="adresse2" class = "col-7 form-control" value = <?= displayInfo($data,'adresse2',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur adresse2">
             <div class="col-4 mr-5"></div>
@@ -78,7 +78,7 @@
 
         <div class="form-group col-8">
             <label for="codePostal" class = "col-4">Code postal *: </label>
-            <input type="text" name = "codePostal" id="codePostal" class = "col-3 form-control" value = <?= displayInfo('code_postal',$customer)?>>
+            <input type="text" name = "codePostal" id="codePostal" class = "col-3 form-control" value = <?= displayInfo($data,'code_postal',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur codePostal">
             <div class="col-4 mr-5"></div>
@@ -88,7 +88,7 @@
         <div class="form-group col-8">
             <label for="ville" class = "col-4">Ville *: </label>
             <select class = "form-control col-7" name="ville" id="ville">
-                <option value="value = <?= displayInfo('ville',$customer)?>"><?= displayInfo('ville',$customer)?></option>
+                <option value="value = <?= displayInfo($data,'ville',$customer)?>"><?= displayInfo($data,'ville',$customer)?></option>
             </select>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur ville">
@@ -98,7 +98,7 @@
 
         <div class="form-group col-8">
             <label for="tel1" class = "col-4">Téléphone Société * : </label>
-            <input type="text" name = "tel1" id="tel1" class = "col-7 form-control" value = <?= displayInfo('telephone1',$customer)?>>
+            <input type="text" name = "tel1" id="tel1" class = "col-7 form-control" value = <?= displayInfo($data,'telephone1',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur telSociete">
             <div class="col-4 mr-5"></div>
@@ -107,7 +107,7 @@
 
         <div class="form-group col-8">
             <label for="tel2" class = "col-4">Téléphone Directe * : </label>
-            <input type="text" name = "tel2" id="tel2" class = "col-7 form-control" value = <?= displayInfo('telephone2',$customer)?>>
+            <input type="text" name = "tel2" id="tel2" class = "col-7 form-control" value = <?= displayInfo($data,'telephone2',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur telDirect">
             <div class="col-4 mr-5"></div>
@@ -116,7 +116,7 @@
 
         <div class="form-group col-8">
             <label for="email" class = "col-4">Email * : </label>
-            <input type="email" name = "email" id="email" class = "col-7 form-control" value = <?= displayInfo('email',$customer)?>>
+            <input type="email" name = "email" id="email" class = "col-7 form-control" value = <?= displayInfo($data,'email',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur email">
             <div class="col-4 mr-5"></div>
