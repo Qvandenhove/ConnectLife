@@ -14,7 +14,7 @@
             </div>
             <div class= "head col text">
                 <p>Nous sommes désolés mais il semble qu'une erreur ce soit produite.</p>
-                <p>Ce lien n’existe pas. Vous devez <strong class="strong">contacter</strong> notre service mass-mailing pour obtenir des informations complémentaires.</p>
+                <p>Ce lien n’existe pas. Veuillez <strong class="strong">contacter</strong> notre service mass-mailing pour obtenir des informations complémentaires.</p>
             </div>
             <div class="head">
                 <button class= "col btn"><a href= #>Contact</a></button>            
