@@ -13,7 +13,7 @@ function home($customer){
     if ($customer == false){
         require('Views/mort.php') ;
 
-    }else if(($customer['estSociete'] == '1' && sizeof($customer) >= 13) || ($customer['estSociete'] == '0' && sizeof($customer) >=10 )){
+    }else if(($customer['estSociete'] == '1' && sizeof($customer) >= 13) || ($customer['estSociete'] == '0' && sizeof($customer) >=11)){
         echo 'formualaire déja rempli';
     }else{
         require('Views/accueil.php');
@@ -21,7 +21,8 @@ function home($customer){
 }
 
 function wrongMail($client){
-    echo 'Mail différent de celui que nous avons en base <a href="index.php?action=form&client='.$_GET['client'].'">Retour</a>';
+    $data = json_decode(file_get_contents('Public/JSON/'.$_GET['client']), true);
+    require('Views/erreur.php');
 }
 
 function thanks(){

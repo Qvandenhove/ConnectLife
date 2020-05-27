@@ -5,6 +5,7 @@ if(file_exists('Public/JSON/'.$_GET['client'])){
 }else{
     $data= false;
 }
+
 function displayInfo($data,$info,$customer){
     if($data != false && isset($data[$info]) && ($data[$info] != null || $data[$info] != '')){
         return $data[$info];
