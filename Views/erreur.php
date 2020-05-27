@@ -13,13 +13,13 @@
                 <p>Une erreur est survenue !</p>
             </div>
             <div class= "head col text">
-                <p>Nous sommes désolés #inserNOM/PRENOM mais il semble qu'une erreur ce soit produite.</p>
+                <p>Nous sommes désolés <?= $data['prenom'] ?> mais il semble qu'une erreur ce soit produite.</p>
                 <p>L'adresse Mail renseingée ne correspond pas.</p> 
                 <p>Vous pouvez <strong class="strong">retourner au formulaire</strong> et renseingner de nouveau votre adresse Mail</p>  
                 <p>Ou, <strong class="strong">contactez notre service mass-mailing</strong> pour des informations complémentaires.</p> 
             </div>
             <div class="head">
-                <button class= "col btn"><a href= #>Formulaire</a></button>     
+                <button class= "col btn"><a href= "index.php?client=<?= $_GET['client']?>&action=form">Formulaire</a></button>
                 <button class= "col btn"><a href= #>Contact</a></button>         
             </div>
         </div>
