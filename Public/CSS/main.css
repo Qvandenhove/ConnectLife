@@ -46,12 +46,26 @@ input.erreur, .checkBox.erreur, select.erreur{
     border-color: red;
 }
 
+div.col-12.d-flex.flex-inline.hidden.erreur {
+    text-align: left;
+    max-width: 100%;
+    height: 5%;
+    left: 0;
+}
+
+.mr-5, .mx-5 {
+    margin-left: -7%;
+    max-width: 100%;
+}
+
 /*Bootstrap*/
 
 .form-group{
     display: flex;
     color: white;
     margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .form-control{
@@ -60,11 +74,15 @@ input.erreur, .checkBox.erreur, select.erreur{
     height: 1.8rem;
     font-size: 12px;
     background: black;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .form-control:focus{
     background: black;
     color: white;
+    padding-top: 3px;
+    padding-bottom: 2px;
 }
 
 .infoEtoile{
@@ -77,4 +95,708 @@ input.erreur, .checkBox.erreur, select.erreur{
     position: relative;
     bottom:5px;
     font-size: 14px;
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1920 ) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+
+
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .container{
+        margin-top: 4%;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        margin-left: -1%;
+        margin-right: 0px;
+    }
+
+    label.m-0.p-0.col-2{
+        left: 10%;
+        top: -10px;
+    }
+
+    label.col-4 {
+        margin-bottom: 5px;
+    }
+
+    div.form-group.col-8{
+        position: initial;
+        text-align: left;
+        left: 19px;
+    }
+
+    div.checkBox{
+        left: -66px;
+        position: relative;
+    }
+
+    div.checkBox.erreur{
+        top: 0px;
+    }
+
+    div.checkBox[id=civiliteHomme]{
+        left: -65px;
+        display: flex;
+        position: absolute;
+    }
+
+    .radio{
+        display: block;
+        left: 70px;
+    }
+
+    label.col-4{
+        max-width: 100%;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    .col-3 {
+        max-width: 45%;
+    }
+
+    .col-4{
+        left: -14px;
+        flex: 0 0 10%;
+    }
+
+    .col-7{
+        max-width: 100%;
+        text-align: left;
+        padding-top: 1%;
+    }
+
+    .col-8{
+        position: relative;
+        left: -9px;
+        flex: 1 0 66.666667%;
+        font-size: 13px;
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 100%;
+    }
+
+    .col-12{
+        line-height: 15px;
+        max-width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    div.col-12.d-flex.flex-inline.hidden.erreur {
+        text-align: left;
+        max-width: 100%;
+        left: 0;
+    }
+
+    .mr-5, .mx-5 {
+        max-width: 100%;
+        margin-right: -3rem !important;
+        margin-left: 1%;
+    }
+
+    .form-group{
+        flex-direction: column;
+        display: block;
+        color: white;
+        margin: 0;
+        max-width: none;
+    }
+
+
+    .infoEtoile{
+        margin-left: -5%;
+        margin-bottom: 23px;
+        max-width: 100%;
+    }
+    input.btn[type=submit]{
+        margin-bottom: 7%;
+        margin-right: 3%;
+    }
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 740px) {
+    label[for=civiliteHomme].m-0.p-0.col-2 {
+        left: 19%;
+    }
+
+    label[for=civiliteFemme].m-0.p-0.col-2 {
+        left: 5%;
+    }
+
+    .checkBox{
+        width: 1rem;
+        height: 1rem;
+        border: white 1px solid;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .form-group.col-8{
+        padding-right: 0;
+        padding-left: 0;
+        position: relative;
+        width: 100%;
+    }
+    input[type=radio]{
+        position: absolute;
+        visibility: hidden;
+        z-index: 2;
+    }
+
+    .col-4{
+        max-width: 33.33%;
+        padding-right: 13px;
+        padding-left: 13px;
+        flex: 0 0 33.33%;
+    }
+
+    .col-7{
+        text-align: left;
+        padding-bottom: 5px;
+        padding-top: 3px;
+    }
+
+    .col-8{
+        position: relative;
+        flex: 1 0 21.66%;
+        max-width: 100%;
+    }
+
+    .mr-5, .mx-5{
+        margin-right: 0rem !important;
+        margin-left: -4%;
+        max-width: 100%;
+    }
+
+    .radio{
+        position: relative;
+        top: 3px;
+        left: 0;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .erreur {
+        color: red;
+    }
+
+    input.erreur, .checkBox.erreur, select.erreur {
+        border-color: red;
+    }
+
+    /*Bootstrap*/
+    .infoEtoile{
+        margin-bottom: 3%;
+        margin-right: 11%;
+    }
+
+    input.btn[type=submit]{
+        margin-bottom: 2%;
+        margin-right: 5%;
+    }
+}
+
+
+@media screen and (min-width: 741px) and (max-width: 986px) {
+    label[for=civiliteHomme].m-0.p-0.col-2 {
+        left: 18%;
+    }
+
+    label[for=civiliteFemme].m-0.p-0.col-2 {
+        left: 5%;
+    }
+
+    .form-group.col-8{
+        padding-right: 0;
+        padding-left: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    div.checkBox.erreur{
+        top: 0px;
+        left: 1px;
+        /*
+        position: absolute;
+        */
+    }
+
+    input[type=radio]{
+        position: absolute;
+        visibility: hidden;
+        z-index: 2;
+    }
+
+    .radio{
+        position: relative;
+        top: 3px;
+        left: 0;
+    }
+
+    div.radio:nth-child(4) {
+        left: 49px;
+    }
+
+    .col-8{
+        max-width: 80%;
+    }
+
+    .mr-5, .mx-5 {
+        max-width: 100%;
+        margin-right: -1rem !important;
+        margin-left: 3%;
+        margin-bottom: 4%;
+    }
+
+    .infoEtoile{
+        margin-bottom: 3%;
+        margin-right: 29%;
+    }
+    input.btn[type=submit]{
+        margin-bottom: 2%;
+        margin-right: 15%;
+    }
+}
+
+
+@media screen and (min-width: 987px) and (max-width: 1190px) {
+    label[for=civiliteHomme].m-0.p-0.col-2 {
+        left: 16%;
+    }
+
+    label[for=civiliteFemme].m-0.p-0.col-2 {
+        left: 4%;
+    }
+
+    .checkBox {
+        width: 1rem;
+        height: 1rem;
+        border: white 1px solid;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .form-group.col-8 {
+        padding-right: 0;
+        padding-left: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    div.checkBox.erreur {
+        top: 0px;
+        left: 0px;
+        position: absolute;
+    }
+
+
+    input[type=radio] {
+        position: absolute;
+        visibility: hidden;
+        z-index: 2;
+    }
+
+    .radio {
+        position: relative;
+        top: 5px;
+        left: 0;
+    }
+
+    div.radio:nth-child(4) {
+        left: 53px;
+    }
+
+    .mr-5, .mx-5 {
+        max-width: 100%;
+        margin-right: 1rem !important;
+        margin-left: 2%;
+    }
+
+    .infoEtoile {
+        margin-bottom: 2%;
+        margin-right: 41%;    }
+
+    input.btn[type=submit] {
+        margin-right: 184px;
+    }
+}
+
+
+@media screen and (min-width: 1191px) and (max-width: 1360px) {
+    label.col-4 {
+        margin-bottom: 5px;
+    }
+    div.form-group.col-8{
+        position: initial;
+        text-align: left;
+        left: 19px;
+    }
+
+    div.checkBox{
+        left: -69px;
+        position: relative;
+        top: 4px;
+    }
+
+    div.checkBox.erreur{
+        top: 4px;
+    }
+
+    div.checkBox[id=civiliteHomme]{
+        left: -65px;
+        display: flex;
+        position: absolute;
+    }
+
+    .radio{
+        display: block;
+        left: 70px;
+    }
+
+    label.col-4{
+        max-width: 100%;
+    }
+
+    .col-2{
+        max-width: 15%;
+        left: 8px;
+    }
+
+    .col-3 {
+        max-width: 45%;
+    }
+
+    .col-4{
+        left: 10px;
+        flex: 0 0 25%;    }
+
+    .col-7{
+        max-width: 100%;
+        text-align: left;
+        padding-top: 1%;
+        flex: 1 0 58.333333%;
+    }
+
+    .col-8{
+        position: relative;
+        left: 4px;
+        flex: 1 0 21.66%;
+        padding-right: 15px;
+        padding-left: 15px;    }
+
+    .col-12{
+        line-height: 20px;
+        max-width: 100%;
+    }
+
+    div.col-12.d-flex.flex-inline.hidden.erreur {
+        text-align: left;
+        max-width: 100%;
+        left: 0;
+    }
+
+    .mr-5, .mx-5 {
+        max-width: 100%;
+        margin-right: 0rem !important;
+        margin-left: 7%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    input.erreur, .checkBox.erreur, select.erreur {
+        border-color: red;
+    }
+
+    .form-control:focus {
+        background: black;
+        color: white;
+        max-width: none;
+
+    }
+
+    .infoEtoile{
+        margin-bottom: 2%;
+        margin-right: 34%;
+        margin-top: 1%;
+    }
+
+    input.btn[type="submit"] {
+        margin-bottom: 1%;
+        margin-right: 185px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1361px) and (max-width: 1600px) {
+    label.col-4 {
+        margin-bottom: 5px;
+    }
+
+    div.form-group.col-8{
+        position: initial;
+        text-align: left;
+        left: 19px;
+    }
+
+    div.checkBox{
+        left: -71px;
+        position: relative;
+        top: 4px;
+    }
+
+    div.checkBox.erreur{
+        top: 2px;
+    }
+
+    div.checkBox[id=civiliteHomme]{
+        left: -65px;
+        display: flex;
+        position: absolute;
+    }
+
+    .radio{
+        display: block;
+        left: 70px;
+    }
+
+    label.col-4{
+        max-width: 100%;
+    }
+
+    .col-2{
+        max-width: 100%;
+    }
+
+    .col-3 {
+        max-width: 45%;
+    }
+
+    .col-4{
+        left: -10px;
+        flex: 0 0 25%;
+    }
+
+    .col-7{
+        max-width: 100%;
+        text-align: left;
+        padding-top: 0%;
+        padding-bottom: 5px;
+        flex: 1 0 58.333333%;
+    }
+
+    .col-8{
+        position: relative;
+        left: 10px;
+        flex: 1 0 21.66%;
+        max-width: 66%;
+    }
+
+    .col-12{
+        line-height: 20px;
+        max-width: 100%;
+    }
+
+    div.col-12.d-flex.flex-inline.hidden.erreur {
+        text-align: left;
+        max-width: 100%;
+        left: 0;
+    }
+
+    .mr-5, .mx-5 {
+        max-width: 100%;
+        margin-right: 10rem !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .erreur {
+        color: red;
+        margin: 1px;
+    }
+
+    input.erreur, .checkBox.erreur, select.erreur {
+        border-color: red;
+    }
+
+    .form-control:focus {
+        background: black;
+        color: white;
+        max-width: none;
+
+    }
+
+    .infoEtoile{
+        margin-bottom: 2%;
+        margin-right: 34%;
+        margin-top: 1%;
+    }
+
+    input.btn[type="submit"] {
+        margin-bottom: 1%;
+        margin-right: 185px;
+    }
+}
+
+
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        background: black;
+        color: white;
+    }
+
+    label {
+        margin: 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    label.col-4 {
+        margin-bottom: 5px;
+    }
+
+    div.form-group.col-8 {
+        position: initial;
+        text-align: left;
+        left: 19px;
+    }
+
+    div.checkBox {
+        left: -71px;
+        position: relative;
+        top: 4px;
+    }
+
+    div.checkBox.erreur {
+        top: 2px;
+    }
+
+    div.checkBox[id=civiliteHomme] {
+        left: -65px;
+        display: flex;
+        position: absolute;
+    }
+
+    .radio {
+        display: block;
+        left: 70px;
+    }
+
+    label.col-4 {
+        max-width: 100%;
+    }
+
+    .col-2 {
+        max-width: 100%;
+        left: 9px;
+    }
+
+    .col-3 {
+        max-width: 45%;
+    }
+
+    .col-4 {
+        left: -10px;
+        flex: 0 0 25%;
+    }
+
+    .col-7 {
+        max-width: 100%;
+        text-align: left;
+        padding-top: 0%;
+        padding-bottom: 5px;
+        flex: 1 0 58.333333%;
+    }
+
+    .col-8 {
+        position: relative;
+        left: 10px;
+        flex: 1 0 21.66%;
+        max-width: 66%;
+    }
+
+    .col-12 {
+        line-height: 20px;
+        max-width: 100%;
+    }
+
+    div.col-12.d-flex.flex-inline.hidden.erreur {
+        text-align: left;
+        max-width: 100%;
+        left: 0;
+    }
+
+    .col-4 mr-5 {
+        left: 5px;
+
+    }
+
+    .mr-5, .mx-5 {
+        max-width: 100%;
+        margin-right: 10rem !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .erreur {
+        color: red;
+        margin: 1px;
+    }
+
+    input.erreur, .checkBox.erreur, select.erreur {
+        border-color: red;
+    }
+
+    .form-control:focus {
+        background: black;
+        color: white;
+        max-width: none;
+
+    }
+
+    .infoEtoile {
+        margin-bottom: 2%;
+        margin-right: 34%;
+        margin-top: 1%;
+    }
+
+    input.btn[type="submit"] {
+        margin-bottom: 1%;
+        margin-right: 185px;
+    }
 }
