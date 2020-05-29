@@ -13,7 +13,7 @@ function home($customer){
     if ($customer == false){
         require('Views/mort.php') ;
 
-    }else if(($customer['estSociete'] == '1' && sizeof($customer) >= 13) || ($customer['estSociete'] == '0' && sizeof($customer) >=11)){
+    }else if(($customer['estSociete'] == '1' && sizeof($customer) >= 13) || ($customer['estSociete'] == '0' && sizeof($customer) >=12)){
         echo 'formualaire déja rempli';
     }else{
         require('Views/accueil.php');
