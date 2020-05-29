@@ -178,7 +178,7 @@ html, body{
     .col-7{
         max-width: 100%;
         text-align: left;
-        padding-top: 1%;
+        padding-top: 0%;
     }
 
     .col-8{
@@ -261,22 +261,29 @@ html, body{
     }
 
     .col-4{
-        max-width: 33.33%;
-        padding-right: 13px;
-        padding-left: 13px;
+        max-width: 35%;
+        padding-right: 0px;
+        padding-left: 0px;
         flex: 0 0 33.33%;
     }
 
     .col-7{
         text-align: left;
-        padding-bottom: 5px;
-        padding-top: 3px;
+        padding-top: 1px;
+        padding-bottom: 2px;
     }
 
     .col-8{
         position: relative;
         flex: 1 0 21.66%;
         max-width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .col-12{
+        padding-right: 0px;
+        padding-left: 0px;
     }
 
     .mr-5, .mx-5{
@@ -291,11 +298,11 @@ html, body{
         left: 0;
     }
 
-    .hidden {
+    .hidden{
         visibility: hidden;
     }
 
-    .erreur {
+    .erreur{
         color: red;
     }
 
@@ -305,13 +312,14 @@ html, body{
 
     /*Bootstrap*/
     .infoEtoile{
-        margin-bottom: 3%;
-        margin-right: 11%;
+        margin-bottom: 9%;
+        margin-right: 18%;
+        margin-top: 2%;
     }
 
     input.btn[type=submit]{
-        margin-bottom: 2%;
-        margin-right: 5%;
+        margin-bottom: 3%;
+        margin-right: 8%;
     }
 }
 
@@ -357,7 +365,7 @@ html, body{
     }
 
     .col-8{
-        max-width: 80%;
+        max-width: 85%;
     }
 
     .mr-5, .mx-5 {
@@ -430,6 +438,15 @@ html, body{
         margin-right: 1rem !important;
         margin-left: 2%;
     }
+    .col-7{
+        padding-top: 1px;
+        padding-bottom: 2px;
+    }
+
+    .col-8{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
     .infoEtoile {
         margin-bottom: 2%;
@@ -492,7 +509,8 @@ html, body{
     .col-7{
         max-width: 100%;
         text-align: left;
-        padding-top: 1%;
+        padding-top: 1px;
+        padding-bottom: 2px;
         flex: 1 0 58.333333%;
     }
 
@@ -501,7 +519,8 @@ html, body{
         left: 4px;
         flex: 1 0 21.66%;
         padding-right: 15px;
-        padding-left: 15px;    }
+        padding-left: 15px;
+    }
 
     .col-12{
         line-height: 20px;
@@ -600,8 +619,8 @@ html, body{
     .col-7 {
         max-width: 100%;
         text-align: left;
-        padding-top: 0%;
-        padding-bottom: 5px;
+        padding-top: 1px;
+        padding-bottom: 2px;
         flex: 1 0 58.333333%;
     }
 
@@ -732,8 +751,8 @@ html, body{
     .col-7 {
         max-width: 100%;
         text-align: left;
-        padding-top: 0%;
-        padding-bottom: 5px;
+        padding-top: 1px;
+        padding-bottom: 2px;
         flex: 1 0 58.333333%;
     }
 
