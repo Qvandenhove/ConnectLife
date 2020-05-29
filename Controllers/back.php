@@ -20,13 +20,20 @@ function getCustomer($customerGUID){
 
 function update($GUID){
     $customerManager = new CESI\ConnectLife\CustomerManager();
-    $isSociety = getCustomer($GUID)['estSociete'];
-    if($isSociety == '1'){
-        $societyManager = new CESI\ConnectLife\SocietyManager();
-        $idsociete=$societyManager->CreateSociety($_POST["nomSociete"]);
-        $customerManager->updateProfessional($GUID, $idsociete);
+    $userMail = getCustomer($GUID)['email'];
+    if($_POST['email'] === $userMail){
+        $isSociety = getCustomer($GUID)['estSociete'];
+        if($isSociety == '1'){
+            $societyManager = new CESI\ConnectLife\SocietyManager();
+            $idsociete=$societyManager->CreateSociety($_POST["nomSociete"]);
+            $customerManager->updateProfessional($GUID, $idsociete);
+        }
+        else{
+            $customerManager->updateParticular($GUID);
+        }
+    }else{
+        file_put_contents('Public/JSON/'.$_GET['client'],json_encode($_POST));
+        header('Location: index.php?action=wrongMail&client='.$_GET['client']);
     }
-    else{
-        $customerManager->updateParticular($GUID);
-    }
+
 }

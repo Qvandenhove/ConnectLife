@@ -7,9 +7,9 @@ namespace CESI\ConnectLife;
 class CustomerManager extends Manager
 {
     public function getCustomer($GUID){
-        $customer = $this->db->prepare('SELECT GUIDClient,nom,email,estSociete FROM clients WHERE GUIDClient = :GUID');
+        $customer = $this->db->prepare('SELECT * FROM clients WHERE GUIDClient = :GUID');
         $customer->execute(['GUID' => $GUID]);
-        return $customer->fetch();
+        return $customer->fetch(\PDO::FETCH_ASSOC);
     }
 
     public function updateProfessional($GUID, $idSociete){
@@ -39,14 +39,15 @@ class CustomerManager extends Manager
 
         $request->execute([
             ":GUID"=> $GUID,
+            ":civilite" => $_POST['civilite'],
             ":nom" => $_POST["nom"],
             ":prenom" => $_POST["prenom"],
             ":adresse1" => $_POST["adresse1"],
             ":adresse2" => $_POST["adresse2"],
             ":code_postal" => $_POST["codePostal"],
             ":ville" => $_POST["ville"],
-            ":telephone1" => $_POST["telephone1"],
-            ":telephone2" => $_POST["telephone2"],
+            ":telephone1" => $_POST["tel1"],
+            ":telephone2" => $_POST["tel2"],
         ]);
 
     }

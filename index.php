@@ -24,6 +24,11 @@ switch($action){
         getVilles();
         break;
 
+    case 'wrongMail':
+        $customer = getCustomer($_GET['client']);
+        wrongMail($customer);
+        break;
+
     default:
         $customer = getCustomer($_GET['client']);
         home($customer);
