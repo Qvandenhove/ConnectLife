@@ -18,6 +18,12 @@ function getCustomer($customerGUID){
     return $customer;
 }
 
+function getCustomersForXML(){
+    $customerManager = new CESI\ConnectLife\CustomerManager();
+    $customerList = $customerManager->getCustomersForXML();
+    return $customerList;
+}
+
 function update($GUID){
     $customerManager = new CESI\ConnectLife\CustomerManager();
     $userMail = getCustomer($GUID)['email'];

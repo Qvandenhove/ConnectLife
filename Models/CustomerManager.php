@@ -52,7 +52,11 @@ class CustomerManager extends Manager
 
     }
 
-
+    public function getCustomersForXML(){
+        $req_customer = $this->db->query("SELECT * FROM Clients WHERE statut_XML = 'non reçu'");
+        $customer_saved = $this->db->exec("UPDATE clients SET statut_XML = 'reçu'");
+        return $req_customer;
+    }
 
 }
 

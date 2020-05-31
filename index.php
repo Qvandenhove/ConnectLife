@@ -29,6 +29,11 @@ switch($action){
         wrongMail($customer);
         break;
 
+    case 'get_clients':
+        $liste_clients = getCustomersForXML();
+        customer_XML($liste_clients);
+        break;
+
     default:
         $customer = getCustomer($_GET['client']);
         home($customer);
