@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 
-$stylesheets = ['main', 'accueil'];
+$stylesheets = ['accueil'];
 ?>
 <div class="container connectlife">
     <div class="row">
@@ -17,7 +17,7 @@ $stylesheets = ['main', 'accueil'];
                 <p>Nous vous enverrons un <strong class="strong">bon d'achat</strong> via l'adresse email valide fournie.</p>
             </div>
             <div class="head">
-                <button class= "col btn"><a href= index.php> Au revoir </a></button>
+                <button class= "col btn"><a href= # > Au revoir </a></button>
             </div>
         </div>
     </div>

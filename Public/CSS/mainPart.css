@@ -222,11 +222,11 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
     .mr-5, .mx-5 {
         max-width: 100%;
         margin-right: -2rem !important;
-        margin-left: -2.5%;
+        margin-left: -1.5%;
     }
 
     .ml-1, .mx-1 {
-        margin-left: -4.25rem !important;
+        margin-left: -4.5rem !important;
     }
 
     .form-group{
@@ -407,16 +407,14 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
         left: 0;
     }
 
-    div.radio:nth-child(4) {
-        left: 49px;
-    }
+
 
     .col-8{
         max-width: 95%;
     }
 
     .ml-1, .mx-1 {
-        margin-left: -7.25rem !important;
+        margin-left: -7.5rem !important;
     }
 
     .mr-5, .mx-5 {
@@ -491,7 +489,7 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
 
     .mr-5, .mx-5 {
         max-width: 100%;
-        margin-right: 1rem !important;
+        margin-right: 2rem !important;
         margin-left: 2%;
     }
     .col-7{
@@ -501,7 +499,7 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
 
     .col-8{
         padding-right: 15px;
-        padding-left: 15px;
+        padding-left: 0;
     }
 
     .infoEtoile {
@@ -535,7 +533,12 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
     div.checkBox{
         left: -69px;
         position: relative;
-        top: 4px;
+        top: -1px;
+    }
+
+    .fa-check {
+        bottom:1px;
+        left: 2px;
     }
 
     div.checkBox.erreur{
@@ -605,6 +608,10 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
         padding-right: 0;
     }
 
+    .ml-1, .mx-1 {
+        margin-left:2rem !important;
+    }
+
     input.erreur, .checkBox.erreur, select.erreur {
         border-color: red;
     }
@@ -645,7 +652,7 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
     div.checkBox {
         left: -71px;
         position: relative;
-        top: 4px;
+        top: 0px;
     }
 
     .checkBox{
@@ -727,6 +734,10 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
         padding-right: 0;
     }
 
+    .ml-1, .mx-1 {
+        margin-left:-0.75rem !important;
+    }
+
     .hidden {
         visibility: hidden;
     }
@@ -782,6 +793,11 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
         border: white 1px solid;
         position: absolute;
         z-index: 1;
+    }
+
+    .fa, .fas {
+        top: 0px;
+        left: 2px;
     }
 
     div.checkBox {
@@ -860,6 +876,10 @@ div.col-12.d-flex.flex-inline.hidden.erreur {
         margin-right: 10rem !important;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .ml-1, .mx-1 {
+        margin-left:-0.75rem !important;
     }
 
     .hidden {
