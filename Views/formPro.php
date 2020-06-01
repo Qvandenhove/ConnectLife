@@ -1,3 +1,7 @@
+<?php
+$stylesheets = ['main'];
+?>
+
 <section class = "container">
     <form action="index.php?action=update&client=<?= $_GET['client'] ?>" method="POST" class = "col-12 align-items-center flex-column d-flex">
         <img src="Public/Images/connectLife.png" alt="logo connectLife" class = "col-8 m-0">
