@@ -1,3 +1,7 @@
+<?php
+$stylesheets = ['main'];
+?>
+
 <section class = "container">
     <form action="index.php?action=update&client=<?= $_GET['client'] ?>" method="POST" class = "col-12 align-items-center flex-column d-flex">
         <img src="Public/Images/connectLife.png" alt="logo connectLife" class = "col-8 m-0">
@@ -82,7 +86,7 @@
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur codePostal">
             <div class="col-4 mr-5"></div>
-            <div class = "col-7">Veuillez indiquer un code postal valide</div>
+            <div class = "col-8">Veuillez indiquer un code postal valide</div>
         </div>
 
         <div class="form-group col-8">

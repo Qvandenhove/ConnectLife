@@ -1,9 +1,10 @@
 <?php
 
 function form($customer){
-    require('Views/form.php');
+    require("Views/form.php");
 
 }
+
 function home($customer){
     foreach($customer as $key=>$value){
         if($value === null || $value === ''){

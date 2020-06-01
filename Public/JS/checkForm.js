@@ -40,7 +40,7 @@ function displayError(champ){
         champ.classList.remove('erreur');
         champErreur.classList.add('hidden')
         if(champNom === 'tel1'){
-            var tel2 = document.querySelector('input[name=tel2]')
+            var tel2 = document.querySelector('input[name=tel2]');
             tel2.classList.remove('erreur');
             document.querySelector('.erreur.tel2').classList.add('hidden');
         }else if(champNom === 'tel2'){
