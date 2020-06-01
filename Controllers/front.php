@@ -25,7 +25,7 @@ function wrongMail($client){
     require('Views/erreur.php');
 }
 
-function customer_XML($request_result){
+function customer_XML(){
     require("Views/XML_database.php");
 }
 

@@ -14,7 +14,7 @@ class CustomerManager extends Manager
 
     public function updateProfessional($GUID, $idSociete){
         $request = $this->db->prepare("UPDATE clients set clients.idSociete=:idSociete, clients.civilite=:civilite, clients.nom=:nom, clients.prenom=:prenom, clients.fonctionDansLaSociete=:fonctionDansLaSociete, clients.adresse1=:adresse1, clients.adresse2=:adresse2,
-                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2 WHERE GUIDClient=:GUID");
+                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1 WHERE GUIDClient=:GUID");
 
 
         $request->execute([
@@ -35,7 +35,7 @@ class CustomerManager extends Manager
 
     public function updateParticular($GUID){
         $request = $this->db->prepare("UPDATE clients set clients.civilite= :civilite, clients.nom=:nom, clients.prenom=:prenom, clients.adresse1=:adresse1, clients.adresse2=:adresse2,
-                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2 WHERE GUIDClient=:GUID");
+                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1 WHERE GUIDClient=:GUID");
 
         $request->execute([
             ":GUID"=> $GUID,
@@ -53,7 +53,7 @@ class CustomerManager extends Manager
     }
 
     public function getCustomersForXML(){
-        $req_customer = $this->db->query("SELECT * FROM Clients WHERE statut_XML = 'non reçu'");
+        $req_customer = $this->db->query("SELECT * FROM Clients WHERE statut_XML = 'non reçu' AND update_clients = 1");
         $customer_saved = $this->db->exec("UPDATE clients SET statut_XML = 'reçu'");
         return $req_customer;
     }

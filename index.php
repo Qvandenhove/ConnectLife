@@ -30,8 +30,11 @@ switch($action){
         break;
 
     case 'get_clients':
-        $liste_clients = getCustomersForXML();
-        customer_XML($liste_clients);
+        customer_XML();
+        break;
+
+    case 'get_XML':
+        getCustomersForXML();
         break;
 
     default:
