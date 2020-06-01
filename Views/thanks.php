@@ -14,7 +14,7 @@ $stylesheets = ['accueil'];
                 <p>Toute l'équipe de ConnectLife vous remercie.</p>
             </div>
             <div class= "head col text">
-                <p>Nous vous enverrons un <strong class="strong">bon d'achat</strong> via l'adresse email valide fournie.</p>
+                <p>Vous recevrez votre <strong class="strong">bon d'achat</strong> sur l'adresse email fournie.</p>
             </div>
             <div class="head">
                 <button class= "col btn"><a href= # > Au revoir </a></button>
