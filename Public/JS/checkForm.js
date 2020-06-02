@@ -39,14 +39,14 @@ function displayError(champ){
     champ.addEventListener('input',function supprimerErreur(){
         champ.classList.remove('erreur');
         champErreur.classList.add('hidden')
-        if(champNom === 'tel1'){
-            var tel2 = document.querySelector('input[name=tel2]');
-            tel2.classList.remove('erreur');
-            document.querySelector('.erreur.tel2').classList.add('hidden');
-        }else if(champNom === 'tel2'){
-            var tel1 = document.querySelector('input[name=tel1]')
-            tel1.classList.remove('erreur');
-            document.querySelector('.erreur.tel1').classList.add('hidden');
+        if(champNom === 'telephone1'){
+            var telephone2 = document.querySelector('input[name=telephone2]');
+            telephone2.classList.remove('erreur');
+            document.querySelector('.erreur.telephone2').classList.add('hidden');
+        }else if(champNom === 'telephone2'){
+            var telephone1 = document.querySelector('input[name=telephone1]')
+            telephone1.classList.remove('erreur');
+            document.querySelector('.erreur.telephone1').classList.add('hidden');
         }
     });
     champ.classList.add('erreur')
@@ -89,10 +89,10 @@ form.addEventListener('submit',function(event){
                 verifierRadio()
             }
 
-        }else if(['tel1','tel2'].indexOf(nomChamp) !== -1){
-            let tel1 = document.querySelector("input[name=tel1]").value;
-            let tel2 =document.querySelector("input[name=tel2]").value;
-            if(tel1 === '' && tel2 === ''){
+        }else if(['telephone1','telephone2'].indexOf(nomChamp) !== -1){
+            let telephone1 = document.querySelector("input[name=telephone1]").value;
+            let telephone2 =document.querySelector("input[name=telephone2]").value;
+            if(telephone1 === '' && telephone2 === ''){
                 errors = true;
                 displayError(champ)
             }

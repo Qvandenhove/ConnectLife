@@ -14,7 +14,7 @@ class CustomerManager extends Manager
 
     public function updateProfessional($GUID, $idSociete){
         $request = $this->db->prepare("UPDATE clients set clients.idSociete=:idSociete, clients.civilite=:civilite, clients.nom=:nom, clients.prenom=:prenom, clients.fonctionDansLaSociete=:fonctionDansLaSociete, clients.adresse1=:adresse1, clients.adresse2=:adresse2,
-                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1 WHERE GUIDClient=:GUID");
+                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1, status_xml='non reçu' WHERE GUIDClient=:GUID");
 
 
         $request->execute([
@@ -28,14 +28,14 @@ class CustomerManager extends Manager
             ":adresse2" => $_POST["adresse2"],
             ":code_postal" => $_POST["codePostal"],
             ":ville" => $_POST["ville"],
-            ":telephone1" => $_POST["tel1"],
-            ":telephone2" => $_POST["tel2"],
+            ":telephone1" => $_POST["telephone1"],
+            ":telephone2" => $_POST["telephone2"],
         ]);
     }
 
     public function updateParticular($GUID){
         $request = $this->db->prepare("UPDATE clients set clients.civilite= :civilite, clients.nom=:nom, clients.prenom=:prenom, clients.adresse1=:adresse1, clients.adresse2=:adresse2,
-                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1 WHERE GUIDClient=:GUID");
+                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1, status_xml='non reçu' WHERE GUIDClient=:GUID");
 
         $request->execute([
             ":GUID"=> $GUID,
@@ -46,8 +46,8 @@ class CustomerManager extends Manager
             ":adresse2" => $_POST["adresse2"],
             ":code_postal" => $_POST["codePostal"],
             ":ville" => $_POST["ville"],
-            ":telephone1" => $_POST["tel1"],
-            ":telephone2" => $_POST["tel2"],
+            ":telephone1" => $_POST["telephone1"],
+            ":telephone2" => $_POST["telephone2"],
         ]);
 
     }

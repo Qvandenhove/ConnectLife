@@ -44,7 +44,7 @@ function getCustomersForXML(){
             $XMLFile->save($path);
 
         }else{
-            mkdir('Public/XML/' . date('d-m-Y'), 0777, true);
+            mkdir('Public/XML/' . date('d-m-Y'));
             $name = $name = 'listeClients.xml';
             $path = 'Public/XML/' . date('d-m-Y') . '/'. $name;
             $XMLFile->save('Public/XML/' . date('d-m-Y') . '/listeClients.xml');

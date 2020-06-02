@@ -1,9 +1,16 @@
 <?php
 $stylesheets = ['main'];
+$civ = '';
 if(file_exists('Public/JSON/'.$_GET['client'])){
     $data = json_decode(file_get_contents('Public/JSON/'.$_GET['client']),true);
+    if(isset($data)){
+        $civ = $data['civilite'];
+    }
 }else{
     $data= false;
+    if(isset($customer['civilite']) && $civ == ''){
+        $civ = $customer['civilite'];
+    }
 }
 
 function displayInfo($data,$info,$customer){

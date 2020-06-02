@@ -19,8 +19,8 @@
                 <p>Ou, <strong class="strong">contactez notre service mass-mailing</strong> pour des informations complémentaires.</p> 
             </div>
             <div class="head">
-                <button class= "col btn"><a href= "index.php?client=<?= $_GET['client']?>&action=form">Formulaire</a></button>
-                <button class= "col btn"><a href= #>Contact</a></button>         
+                <a href= "index.php?client=<?= $_GET['client']?>&action=form"><button class= "col btn">Formulaire</button></a>
+                <a href= #><button class= "col btn">Contact</button></a>
             </div>
         </div>
     </div>

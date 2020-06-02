@@ -8,14 +8,14 @@ $stylesheets = ['mainPart'];
         <div class="form-group col-8">
             <label class = "col-4">Civilité *: </label>
             <div class="radio">
-                <input class = "form-control" checked="<?= strval($customer['civilite'] == 'F' || $data['civilite'] == 'F')?>" type="radio" id="civiliteFemme" name="civilite" value="Femme">
-                <div class="checkBox"><i class="fas fa-check hidden"></i></div>
+                <input class = "form-control" checked="<?= var_export(boolval($civ == 'F'),true)?>" type="radio" id="civiliteFemme" name="civilite" value="F">
+                <div class="checkBox"><i class="fas fa-check <?= $civ == 'F' ? '' : 'hidden' ?>"></i></div>
             </div>
 
             <label class = "m-0 p-0 col-2" for="civiliteFemme">Madame</label>
             <div class = "radio" style="left:70px">
-                <input class = "form-control" checked="<?= strval($customer['civilite'] == 'H' or $data['civilite'] == 'H')?>"  type="radio" id="civiliteHomme" name="civilite" value="Homme">
-                <div class="checkBox"><i class="fas fa-check hidden"></i></div>
+                <input class = "form-control" checked="<?= var_export(boolval($civ == 'H'),true)?>"  type="radio" id="civiliteHomme" name="civilite" value="H">
+                <div class="checkBox"><i class="fas fa-check <?= $civ == 'H' ? '' : 'hidden' ?>"></i></div>
             </div>
             <label for="civiliteHomme" class = "m-0 p-0 col-2">Monsieur</label>
 
@@ -87,7 +87,7 @@ $stylesheets = ['mainPart'];
         </div>
         <div class="form-group col-8">
             <label for="tel1" class = "col-4">Téléphone fixe : </label>
-            <input type="text" name = "tel1" id="tel1" class = "col-7 form-control" value = <?= displayInfo($data,'telephone1',$customer)?>>
+            <input type="text" name = "telephone1" id="tel1" class = "col-7 form-control" value = <?= displayInfo($data,'telephone1',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur tel2">
             <div class="col-4 mr-5"></div>
@@ -96,7 +96,7 @@ $stylesheets = ['mainPart'];
 
         <div class="form-group col-8">
             <label for="tel2" class = "col-4">Téléphone portable : </label>
-            <input type="text" name = "tel2" id="tel2" class = "col-7 form-control" value = <?= displayInfo($data,'telephone2',$customer)?>>
+            <input type="text" name = "telephone2" id="tel2" class = "col-7 form-control" value = <?= displayInfo($data,'telephone2',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur tel1">
             <div class="col-4 mr-5"></div>
@@ -124,13 +124,6 @@ $stylesheets = ['mainPart'];
 <script src="Public/JS/radioBox.js"></script>
 <script src="Public/JS/checkForm.js"></script>
 <?php
-if(isset($customer['civilite']) or isset($data['civilite'])){
-    if($customer['civilite'] == 'F' || $data == 'civilite'){
-        echo '<script>updateBox1()</script>';
-        }else{
-        echo '<script>updateBox2()</script>';
 
-    }
-}
 
 ?>

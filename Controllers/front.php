@@ -10,15 +10,10 @@ function lien_mort(){
 
 
 function home($customer){
-    foreach($customer as $key=>$value){
-        if($value === null || $value === ''){
-            unset($customer[$key]);
-        }
-    }
     if ($customer == false){
         lien_mort();
 
-    }else if(($customer['estSociete'] == '1' && sizeof($customer) >= 13) || ($customer['estSociete'] == '0' && sizeof($customer) >=12)){
+    }else if($customer['update_clients'] == '1'){
         require('Views/deja_rempli.php');
     }else{
         require('Views/accueil.php');
