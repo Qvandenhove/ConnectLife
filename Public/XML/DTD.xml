@@ -1,0 +1,2 @@
+<!ELEMENT clients(client*)>
+<!ELEMENT client(civilite, nom, prenom, estSociete, fonctionDansLaSociete, telephone1, telephone2, email, code_postal, ville, adresse1, adresse2, idSociete)
