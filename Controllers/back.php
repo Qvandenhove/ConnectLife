@@ -44,7 +44,7 @@ function getCustomersForXML(){
             $XMLFile->save($path);
 
         }else{
-            mkdir('Public/XML/' . date('d-m-Y'));
+            mkdir('Public/XML/' . date('d-m-Y'), 0777, true);
             $name = $name = 'listeClients.xml';
             $path = 'Public/XML/' . date('d-m-Y') . '/'. $name;
             $XMLFile->save('Public/XML/' . date('d-m-Y') . '/listeClients.xml');
@@ -70,6 +70,9 @@ function update($GUID){
             $customerManager->updateParticular($GUID);
         }
     }else{
+        if(file_exists('Public/JSON/') == false){
+            mkdir('Public/JSON/');
+        }
         file_put_contents('Public/JSON/'.$_GET['client'],json_encode($_POST));
         header('Location: index.php?action=wrongMail&client='.$_GET['client']);
     }

@@ -38,6 +38,11 @@ switch($action){
         break;
 
     default:
-        $customer = getCustomer($_GET['client']);
-        home($customer);
+        if(isset($_GET['client'])){
+            $customer = getCustomer($_GET['client']);
+            home($customer);
+        }else{
+            lien_mort();
+        }
+
 }
