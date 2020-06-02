@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 07 mai 2020 à 12:02
+-- Généré le : mar. 02 juin 2020 à 10:47
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.5
 
@@ -41,16 +41,18 @@ CREATE TABLE `clients` (
   `ville` varchar(100) DEFAULT NULL,
   `adresse1` varchar(300) DEFAULT NULL,
   `adresse2` varchar(300) DEFAULT NULL,
-  `idSociete` int(11) DEFAULT NULL
+  `idSociete` int(11) DEFAULT NULL,
+  `statut_XML` varchar(50) NOT NULL DEFAULT 'non reçu',
+  `update_clients` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `clients`
 --
 
-INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, `fonctionDansLaSociete`, `telephone1`, `telephone2`, `email`, `code_postal`, `ville`, `adresse1`, `adresse2`, `idSociete`) VALUES
-('3F2504E0-4F89-11D3-9A0C-0305E82C3301', NULL, 'Dupont', NULL, 1, NULL, NULL, NULL, 'test@mail.fr', NULL, NULL, NULL, NULL, 0),
-('c1417696-392b-4053-8864-12bf8f8d5236', NULL, 'Dupont', NULL, 0, NULL, NULL, NULL, 'fdupont@gmail.com', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, `fonctionDansLaSociete`, `telephone1`, `telephone2`, `email`, `code_postal`, `ville`, `adresse1`, `adresse2`, `idSociete`, `statut_XML`, `update_clients`) VALUES
+('3F2504E0-4F89-11D3-9A0C-0305E82C3301', 'H', 'Dupont', 'Quentin', 1, 'dadadaada', '0321514560', '0678627115', 'test@mail.fr', '62223', 'ANZIN ST AUBIN', 'Adresse', 'Adresse2', 3, 'reçu', 1),
+('c1417696-392b-4053-8864-12bf8f8d5236', 'H', 'Dupont', 'Quentin', 0, NULL, '2872', '', 'fdupont@gmail.com', '62223', 'ECURIE', 'Adresse', '', NULL, 'reçu', 1);
 
 -- --------------------------------------------------------
 
@@ -69,7 +71,9 @@ CREATE TABLE `societe` (
 
 INSERT INTO `societe` (`idSociete`, `nomDeLaSociete`) VALUES
 (0, 'SARL'),
-(1, '');
+(1, ''),
+(2, 'dadadada'),
+(3, 'dadadada');
 
 -- --------------------------------------------------------
 
