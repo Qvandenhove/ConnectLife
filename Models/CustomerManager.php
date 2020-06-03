@@ -14,10 +14,8 @@ class CustomerManager extends Manager
 
     public function updateProfessional($GUID, $idSociete){
         $request = $this->db->prepare("UPDATE clients set clients.idSociete=:idSociete, clients.civilite=:civilite, clients.nom=:nom, clients.prenom=:prenom, clients.fonctionDansLaSociete=:fonctionDansLaSociete, clients.adresse1=:adresse1, clients.adresse2=:adresse2,
-                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1, status_xml='non reçu' WHERE GUIDClient=:GUID");
-
-
-        $request->execute([
+                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1, statut_xml='non reçu' WHERE GUIDClient=:GUID");
+        $result = $request->execute([
             ":GUID"=> $GUID,
             ":idSociete"=> $idSociete,
             ":civilite" => $_POST["civilite"],
@@ -31,11 +29,12 @@ class CustomerManager extends Manager
             ":telephone1" => $_POST["telephone1"],
             ":telephone2" => $_POST["telephone2"],
         ]);
+        var_dump($result);
     }
 
     public function updateParticular($GUID){
         $request = $this->db->prepare("UPDATE clients set clients.civilite= :civilite, clients.nom=:nom, clients.prenom=:prenom, clients.adresse1=:adresse1, clients.adresse2=:adresse2,
-                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1, status_xml='non reçu' WHERE GUIDClient=:GUID");
+                                        clients.code_postal=:code_postal, clients.ville=:ville, clients.telephone1=:telephone1, clients.telephone2=:telephone2, update_clients = 1, statut_xml='non reçu' WHERE GUIDClient=:GUID");
 
         $request->execute([
             ":GUID"=> $GUID,
