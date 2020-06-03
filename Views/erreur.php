@@ -13,7 +13,7 @@
                 <p>Une erreur est survenue !</p>
             </div>
             <div class= "head col text">
-                <p>Nous sommes désolés <?= $data['prenom']. ' ' . $data['prenom'] ?> mais il semble qu'une erreur ce soit produite.</p>
+                <p>Nous sommes désolés <?= $data['prenom']. ' ' . $data['nom'] ?> mais il semble qu'une erreur ce soit produite.</p>
                 <p>L'adresse Mail renseingée ne correspond pas.</p> 
                 <p>Vous pouvez <strong class="strong">retourner au formulaire</strong> et renseingner de nouveau votre adresse Mail</p>  
                 <p>Ou, <strong class="strong">contactez notre service mass-mailing</strong> pour des informations complémentaires.</p> 
