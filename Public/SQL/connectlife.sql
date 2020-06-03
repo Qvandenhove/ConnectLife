@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 02 juin 2020 à 10:47
+-- Généré le : mer. 03 juin 2020 à 14:56
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.5
 
@@ -28,31 +28,32 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `clients` (
-  `GUIDClient` varchar(36) NOT NULL,
-  `civilite` varchar(1) DEFAULT NULL,
-  `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) DEFAULT NULL,
-  `estSociete` int(1) NOT NULL,
-  `fonctionDansLaSociete` varchar(50) DEFAULT NULL,
-  `telephone1` varchar(10) DEFAULT NULL,
-  `telephone2` varchar(10) DEFAULT NULL,
-  `email` varchar(150) NOT NULL,
-  `code_postal` varchar(5) DEFAULT NULL,
-  `ville` varchar(100) DEFAULT NULL,
-  `adresse1` varchar(300) DEFAULT NULL,
-  `adresse2` varchar(300) DEFAULT NULL,
-  `idSociete` int(11) DEFAULT NULL,
-  `statut_XML` varchar(50) NOT NULL DEFAULT 'non reçu',
-  `update_clients` int(11) NOT NULL DEFAULT 0
+                           `GUIDClient` varchar(36) NOT NULL,
+                           `civilite` varchar(1) DEFAULT NULL,
+                           `nom` varchar(50) NOT NULL,
+                           `prenom` varchar(50) DEFAULT NULL,
+                           `estSociete` int(1) NOT NULL,
+                           `fonctionDansLaSociete` varchar(50) DEFAULT NULL,
+                           `telephone1` varchar(10) DEFAULT NULL,
+                           `telephone2` varchar(10) DEFAULT NULL,
+                           `email` varchar(150) NOT NULL,
+                           `code_postal` varchar(5) DEFAULT NULL,
+                           `ville` varchar(100) DEFAULT NULL,
+                           `adresse1` varchar(300) DEFAULT NULL,
+                           `adresse2` varchar(300) DEFAULT NULL,
+                           `idSociete` int(11) DEFAULT NULL,
+                           `statut_XML` varchar(50) NOT NULL DEFAULT 'non reçu',
+                           `update_clients` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `clients`
+-- Tronquer la table avant d'insérer `clients`
 --
 
-INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, `fonctionDansLaSociete`, `telephone1`, `telephone2`, `email`, `code_postal`, `ville`, `adresse1`, `adresse2`, `idSociete`, `statut_XML`, `update_clients`) VALUES
-('3F2504E0-4F89-11D3-9A0C-0305E82C3301', 'H', 'Dupont', 'Quentin', 1, 'dadadaada', '0321514560', '0678627115', 'test@mail.fr', '62223', 'ANZIN ST AUBIN', 'Adresse', 'Adresse2', 3, 'reçu', 1),
-('c1417696-392b-4053-8864-12bf8f8d5236', 'H', 'Dupont', 'Quentin', 0, NULL, '2872', '', 'fdupont@gmail.com', '62223', 'ECURIE', 'Adresse', '', NULL, 'reçu', 1);
+TRUNCATE TABLE `clients`;
+--
+-- Déchargement des données de la table `clients`
+--
 
 -- --------------------------------------------------------
 
@@ -61,19 +62,18 @@ INSERT INTO `clients` (`GUIDClient`, `civilite`, `nom`, `prenom`, `estSociete`, 
 --
 
 CREATE TABLE `societe` (
-  `idSociete` int(11) NOT NULL,
-  `nomDeLaSociete` varchar(100) NOT NULL
+                           `idSociete` int(11) NOT NULL,
+                           `nomDeLaSociete` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `societe`
+-- Tronquer la table avant d'insérer `societe`
 --
 
-INSERT INTO `societe` (`idSociete`, `nomDeLaSociete`) VALUES
-(0, 'SARL'),
-(1, ''),
-(2, 'dadadada'),
-(3, 'dadadada');
+TRUNCATE TABLE `societe`;
+--
+-- Déchargement des données de la table `societe`
+--
 
 -- --------------------------------------------------------
 
@@ -82,10 +82,15 @@ INSERT INTO `societe` (`idSociete`, `nomDeLaSociete`) VALUES
 --
 
 CREATE TABLE `villes` (
-  `Nom_commune` varchar(38) DEFAULT NULL,
-  `Code_postal` int(5) DEFAULT NULL
+                          `Nom_commune` varchar(38) DEFAULT NULL,
+                          `Code_postal` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Tronquer la table avant d'insérer `villes`
+--
+
+TRUNCATE TABLE `villes`;
 --
 -- Déchargement des données de la table `villes`
 --
@@ -39309,14 +39314,14 @@ INSERT INTO `villes` (`Nom_commune`, `Code_postal`) VALUES
 -- Index pour la table `clients`
 --
 ALTER TABLE `clients`
-  ADD PRIMARY KEY (`GUIDClient`),
-  ADD KEY `clients_idSociete_fk` (`idSociete`);
+    ADD PRIMARY KEY (`GUIDClient`),
+    ADD KEY `clients_idSociete_fk` (`idSociete`);
 
 --
 -- Index pour la table `societe`
 --
 ALTER TABLE `societe`
-  ADD PRIMARY KEY (`idSociete`);
+    ADD PRIMARY KEY (`idSociete`);
 
 --
 -- Contraintes pour les tables déchargées
@@ -39326,7 +39331,13 @@ ALTER TABLE `societe`
 -- Contraintes pour la table `clients`
 --
 ALTER TABLE `clients`
-  ADD CONSTRAINT `clients_idSociete_fk` FOREIGN KEY (`idSociete`) REFERENCES `societe` (`idSociete`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD CONSTRAINT `clients_idSociete_fk` FOREIGN KEY (`idSociete`) REFERENCES `societe` (`idSociete`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ADD CONSTRAINT `clients_idSociete_fk` FOREIGN KEY (`idSociete`) REFERENCES `societe` (`idSociete`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
