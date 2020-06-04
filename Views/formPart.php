@@ -63,7 +63,7 @@ $stylesheets = ['mainPart'];
 
         <div class="form-group col-8">
             <label for="codePostal" class = "col-4">Code postal *: </label>
-            <input type="text" name = "codePostal" id="codePostal" class = "col-3 form-control" value = <?= displayInfo($data,'code_postal',$customer)?>>
+            <input type="text" name = "codePostal" id="codePostal" class = "col-3 form-control" value = <?= displayInfo($data,'codePostal',$customer)?>>
         </div>
         <div class = "col-12 d-flex flex-inline hidden erreur codePostal">
             <div class="col-4 mr-5"></div>
@@ -89,7 +89,7 @@ $stylesheets = ['mainPart'];
             <label for="tel1" class = "col-4">Téléphone fixe : </label>
             <input type="text" name = "telephone1" id="tel1" class = "col-7 form-control" value = <?= displayInfo($data,'telephone1',$customer)?>>
         </div>
-        <div class = "col-12 d-flex flex-inline hidden erreur tel2">
+        <div class = "col-12 d-flex flex-inline hidden erreur telephone2">
             <div class="col-4 mr-5"></div>
             <div class="col-8">Veuillez indiquer un numéro de téléphone valide</div>
         </div>
@@ -98,7 +98,7 @@ $stylesheets = ['mainPart'];
             <label for="tel2" class = "col-4">Téléphone portable : </label>
             <input type="text" name = "telephone2" id="tel2" class = "col-7 form-control" value = <?= displayInfo($data,'telephone2',$customer)?>>
         </div>
-        <div class = "col-12 d-flex flex-inline hidden erreur tel1">
+        <div class = "col-12 d-flex flex-inline hidden erreur telephone1">
             <div class="col-4 mr-5"></div>
             <div class="col-8">Veuillez indiquer un numéro de téléphone valide</div>
         </div>

@@ -33,7 +33,7 @@ let option = ['adresse2'];
 
 
 function displayError(champ){
-    var champNom = champ.getAttribute('name')
+    var champNom = champ.getAttribute('name');
     let champErreur = document.querySelector('.erreur.' + champNom);
     champErreur.classList.remove('hidden');
     champ.addEventListener('input',function supprimerErreur(){
@@ -104,7 +104,6 @@ form.addEventListener('submit',function(event){
         }
 
     });
-    console.log(errors);
     if (errors === false){
         form.submit();
     }
