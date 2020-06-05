@@ -1,0 +1,20 @@
+<!ELEMENT clients (client)*>
+<!ELEMENT client (civilite, nom, prenom, estSociete, fonctionDansLaSociete, telephone1, telephone2, email, code_postal, ville, adresse1, adresse2, idSociete, update_clients)>
+<!ATTLIST client
+GUIDClient CDATA #REQUIRED
+xmlns:xsi CDATA #REQUIRED
+xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+<!ELEMENT civilite (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT estSociete (#PCDATA)>
+<!ELEMENT fonctionDansLaSociete (#PCDATA)>
+<!ELEMENT telephone1 (#PCDATA)>
+<!ELEMENT telephone2 (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT code_postal (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT adresse1 (#PCDATA)>
+<!ELEMENT adresse2 (#PCDATA)>
+<!ELEMENT idSociete (#PCDATA)>
+<!ELEMENT update_clients (#PCDATA)>

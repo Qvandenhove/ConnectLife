@@ -1,3 +1,5 @@
 .idea
 /Public/XML
+!Public/XML/DTD.dtd
+!Public/XML/listeClients.xsd
 /Public/JSON
