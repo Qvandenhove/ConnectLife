@@ -26,8 +26,8 @@ class CustomerManager extends Manager
             ":adresse2" => $_POST["adresse2"],
             ":code_postal" => $_POST["codePostal"],
             ":ville" => $_POST["ville"],
-            ":telephone1" => $_POST["telephone1"],
-            ":telephone2" => $_POST["telephone2"],
+            ":telephone1" => $_POST["telephoneSociete"],
+            ":telephone2" => $_POST["telephoneDirect"],
         ]);
     }
 
