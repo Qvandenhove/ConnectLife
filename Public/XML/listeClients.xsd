@@ -25,5 +25,4 @@
             </sxd:sequence>
         </xsd:complexType>
     </xsd:element>
-
 </xsd:schema>
